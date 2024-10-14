@@ -1,7 +1,12 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
+    margin: 0;
     text-align: center;
-    position: relative;
-    display: block;
+}
+
+#tabulka {
+    border: black 5px;
 }
