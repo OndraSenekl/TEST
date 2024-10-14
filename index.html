@@ -3,62 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world</title>
+    <title>TEST01</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
     <script src="app.js"></script>
 </head>
 <body>
-    <h1 id="nadpis">TEST1</h1>
-    
+    <h1 id="nadpis">Ohmův zákon</h1>
+
+    <div id="tabulka">
     <table>
         <tr>
-            <th><input type="number" id="cislo1"></th>
             <th>
-                <select id="operator">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
+                <label for="cislo1">Napětí [V]:</label>
             </th>
-            <th><input type="number" id="cislo2"></th>
-            <th><button onclick="Kalkulacka()">=</button></th>
         </tr>
         <tr>
-            <th colspan="4"><p id="vysledek"></p></th>
+            <th>
+                <input type="number" id="cislo1">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="cislo2">Proud [A]:</label>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="number" id="cislo2">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="cislo3">Odpor [Ω]:</label>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="number" id="cislo3">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <input type="button" id="vypocet" value="Spočítat" onclick="Calculate()">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <p id="vysledek"></p>
+            </th>
         </tr>
     </table>
-    
-    <script>
-    function Kalkulacka() 
-    {
-        const cislo1 = parseFloat(document.getElementById('cislo1').value);
-        const cislo2 = parseFloat(document.getElementById('cislo2').value);
-        const operator = document.getElementById('operator').value;
-        let vysledek;
+    </div>   
 
-        switch (operator) 
-        {
-            case '+':
-                vysledek = cislo1 + cislo2;
-                break;
-            case '-':
-                vysledek = cislo1 - cislo2;
-                break;
-            case '*':
-                vysledek = cislo1 * cislo2;
-                break;
-            case '/':
-                vysledek = cislo2 !== 0 ? cislo1 / cislo2 : 'Nemůžeš dělit nulou';
-                break;
-            default:
-                vysledek = 'Neplatná operace';
-        }
-
-        document.getElementById('vysledek').innerText = vysledek;
-    }
-    </script>
-    
 </body>
-</html>
+</html></html>
+</html>           
